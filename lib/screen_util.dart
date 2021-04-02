@@ -120,6 +120,6 @@ class ScreenUtil {
   ///- [fontSize] The size of the font on the UI design, in dp.
   ///- [allowFontScaling]
   double setSp(num fontSize, {bool? allowFontScalingSelf}) => allowFontScalingSelf == null
-      ? (allowFontScaling ? (fontSize * scaleText) * _textScaleFactor : (fontSize * scaleText))
-      : (allowFontScalingSelf ? (fontSize * scaleText) * _textScaleFactor : (fontSize * scaleText));
+      ? (allowFontScaling ? (fontSize * scaleText) : (fontSize * scaleText) / _textScaleFactor)
+      : (allowFontScalingSelf ? (fontSize * scaleText) : (fontSize * scaleText) / _textScaleFactor);
 }
